@@ -1,0 +1,72 @@
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  overflow-x: hidden;
+  color: #1E4055;
+}
+
+.bg-gradient-1{
+  background: linear-gradient(-90deg, rgba(255,255,255,1) 11%, rgba(145,255,242,0.13069) 80%)
+}
+
+.bg-gradient-2{
+  background: linear-gradient(-90deg, rgba(255,255,255,1) 11%, rgba(145,255,242,0.13069) 40%);
+  margin-top: 2px;
+}
+
+.logo {
+  width: 10%;
+  margin-left: 25px;
+}
+
+.co-1 {
+  color: #0BB19E !important;
+  padding-right: 20px !important;
+}
+
+.co-2 {
+  color: #082436;
+  padding-right: 20px !important;
+}
+
+.co-3 {
+  color: #1E4055;
+}
+
+.page-one {
+  height: auto;
+}
+
+.box-page-one {
+  margin: 50px;
+}
+
+.box-page-one h1{
+  font-size: 400%;
+}
+
+.page-two {
+  margin-top: 100px;
+}
+
+.bg-image-circle {
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -177px;
+  background-position-y: 45px;
+}
+
+.page-three {
+  margin-top: 200px;
+}
+
+.img-center-page-three {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
