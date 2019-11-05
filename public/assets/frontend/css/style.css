@@ -66,7 +66,18 @@ body {
 }
 
 .img-center-page-three {
+  width: 150px;
   margin-right: auto;
   margin-left: auto;
   display: block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.br-company {
+  margin-top: 50px;
+}
+
+.page-four {
+  margin-top: 200px;
 }
