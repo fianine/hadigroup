@@ -27,7 +27,7 @@
           <h1>About Us</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <a href="#" class="co-3">Read More <i class="fa fa-long-arrow-right"></i> </a>
+          <a href="{{ url('about') }}" class="co-3">Read More <i class="fa fa-long-arrow-right"></i> </a>
         </div>
       </div>
     </div>
@@ -45,22 +45,22 @@
         <div class="col-md-3">
           <img class="img-center-page-three" src="{{ asset('/assets/frontend/img/hamura.png') }}">
           <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a href="#" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
+          <a href="{{ url('company#section1') }}" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
         </div>
         <div class="col-md-3">
           <img class="img-center-page-three" src="{{ asset('/assets/frontend/img/gmt.png') }}">
           <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a href="#" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
+          <a href="{{ url('company#section2') }}" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
         </div>
         <div class="col-md-3">
           <img class="img-center-page-three" src="{{ asset('/assets/frontend/img/didaya.png') }}">
           <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a href="#" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
+          <a href="{{ url('company#section3') }}" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
         </div>
         <div class="col-md-3">
           <img class="img-center-page-three" src="{{ asset('/assets/frontend/img/bengkelhost.png') }}">
           <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a href="#" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
+          <a href="{{ url('company#section4') }}" class="text-center co-3" style="display: block;"> Read More <i class="fa fa-long-arrow-right"></i> </a>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
           <div class="mx-auto">
             <h5 style="text-align: center">Daily Quotes</h5>
             <h2 style="text-align: center"> <strong>I Miss You My Self, I Love You My Self</strong> </h2>
-            <h6 style="text-align: center">Bill Gates - 2019</h6>
+            <h6 style="text-align: center">Mawang - 2019</h6>
           </div>
         </div>
       </div>

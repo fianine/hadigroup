@@ -13,6 +13,10 @@ class PagesController extends Controller {
     return view('page/about');
   }
 
+  public function company() {
+    return view('page/company');
+  }
+
 }
 
 ?>
