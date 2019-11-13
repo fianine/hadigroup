@@ -17,6 +17,14 @@ class PagesController extends Controller {
     return view('page/company');
   }
 
+  public function blog() {
+    return view('page/blog');
+  }
+
+  public function blog_detail() {
+    return view('page/blogDetail');
+  }
+
 }
 
 ?>

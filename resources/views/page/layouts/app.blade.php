@@ -30,7 +30,7 @@
             <a class="nav-link co-2" href="{{ url('company') }}">Company</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link co-2" href="#">Blog</a>
+            <a class="nav-link co-2" href="{{ url('blog') }}">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link co-2" href="#">Contact</a>

@@ -5,6 +5,10 @@ body {
   color: #1E4055;
 }
 
+hr {
+  border: 0.5px solid #91fff2 !important;
+}
+
 #particles-js {
 	position: absolute;
 	width: 100%;
@@ -80,6 +84,30 @@ a:hover{
 }
 
 .thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-big {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.thumbnail-big img {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  height: 140%;
+  width: 100%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.thumbnail-big img.portrait {
   width: 100%;
   height: auto;
 }
@@ -208,7 +236,22 @@ a:hover{
   margin-top: 50px;
 }
 
+.box-blog-big {
+  background: #FFF;
+  box-shadow: 0px 2px 7px -3px #555;
+  width: 100%;
+  border-radius: 10px;
+  height: 96%;
+  margin-top: 50px;
+}
+
 .title-blog {
+  width: 100%;
+  padding: 10px;
+}
+
+.title-blog-big {
+  margin-left: 370px;
   width: 100%;
   padding: 10px;
 }
@@ -216,6 +259,12 @@ a:hover{
 .desc-blog {
   width: 100%;
   padding: 10px;
+}
+
+.desc-blog-big {
+    width: 50%;
+    padding: 10px;
+    margin-left: 370px;
 }
 
 .box-blog a{
@@ -339,4 +388,49 @@ a:hover{
 .img-company {
   margin-bottom: 30px;
   width: 155px;
+}
+
+.blog-header {
+  margin-top: 55px;
+}
+
+.col-blog{
+  width: 50%;
+  height: 50%;
+}
+
+.bg-gradient-blog {
+  width: 80px;
+  height: 20px;
+  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  top: -25px;
+  position: relative;
+  z-index: -9;
+}
+
+.bg-gradient-about {
+  width: 142px;
+  height: 20px;
+  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  top: -25px;
+  position: relative;
+  z-index: -9;
+}
+
+.box-blog-detail {
+  margin-top: 50px;
+}
+
+ol.breadcrumb {
+  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%) !important;
+}
+
+.breadcrumb-item a {
+  color: #555 !important;
 }
