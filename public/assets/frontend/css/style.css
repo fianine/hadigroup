@@ -1,14 +1,32 @@
+@font-face {
+  font-family: 'NunitoSans-Regular';
+  src: url('http://hadimuda.abc:8000/assets/frontend/fonts/NunitoSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('http://hadimuda.abc:8000/assets/frontend/fonts/NunitoSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'NunitoSans-SemiBold';
+  src: url('http://hadimuda.abc:8000/assets/frontend/fonts/NunitoSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'NunitoSans-BoldItalic';
+  src: url('http://hadimuda.abc:8000/assets/frontend/fonts/NunitoSans-BoldItalic.ttf');
+}
 body {
-  min-height: 75rem;
-  padding-top: 4.5rem;
-  overflow-x: hidden;
-  color: #1E4055;
+	min-height: 75rem;
+	padding-top: 4.5rem;
+	overflow-x: hidden;
+	color: #1E4055;
+  font-family: 'NunitoSans-Regular';
 }
-
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'NunitoSans-Bold';
+}
 hr {
-  border: 0.5px solid #91fff2 !important;
+	border: 0.5px solid #91fff2 !important;
 }
-
 #particles-js {
 	position: absolute;
 	width: 100%;
@@ -18,419 +36,456 @@ hr {
 	background-size: cover;
 	background-position: 50% 50%;
 }
-
-.bg-gradient-1{
-  background: linear-gradient(-90deg, rgba(255,255,255,1) 11%, rgba(145,255,242,0.13069) 80%)
+.bg-gradient-1 {
+	background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 11%, rgba(145, 255, 242, 0.13069) 80%)
 }
-
-.bg-gradient-2{
-  background: linear-gradient(-90deg, rgba(255,255,255,1) 11%, rgba(145,255,242,0.13069) 40%);
-  margin-top: 2px;
+.bg-gradient-2 {
+	background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 11%, rgba(145, 255, 242, 0.13069) 40%);
+	margin-top: 2px;
 }
-
-.bg-gradient-3{
-  background: linear-gradient(90deg, rgba(145,213,255,1) 0%, rgba(110,245,245,1) 53%, rgba(111,245,245,1) 100%, rgba(145,255,242,1) 100%, rgba(0,212,255,1) 100%);
+.bg-gradient-3 {
+	background: linear-gradient(90deg, rgba(145, 213, 255, 1) 0%, rgba(110, 245, 245, 1) 53%, rgba(111, 245, 245, 1) 100%, rgba(145, 255, 242, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
-
 .logo {
-  width: 10%;
-  margin-left: 25px;
+	width: 10%;
+	margin-left: 25px;
 }
-
 .ml-margin-right {
-  margin-right: 20px;
+	margin-right: 20px;
 }
-
 .co-1 {
-  color: #0BB19E !important;
-  padding-right: 20px !important;
+	color: #0BB19E !important;
+	padding-right: 20px !important;
 }
-
 .co-2 {
-  color: #082436;
-  padding-right: 20px !important;
+	color: #082436;
+	padding-right: 20px !important;
+  font-family: 'NunitoSans-SemiBold';
 }
-
-.co-2:hover{
-  color: #0BB19E !important;
+.co-2:hover {
+	color: #0BB19E !important;
 }
-
-a:hover{
-  color: #0BB19E !important;
-  text-decoration: none;
+a:hover {
+	color: #0BB19E !important;
+	text-decoration: none;
 }
-
 .co-3 {
-  color: #1E4055;
+	color: #1E4055;
 }
-
 .thumbnail {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 8px 8px 0px 0px;
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 8px 8px 0px 0px;
 }
-
 .thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	height: auto;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
-
 .thumbnail img.portrait {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
-
 .thumbnail-big {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 8px 0px 0px 8px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 8px 0px 0px 8px;
 }
-
 .thumbnail-big img {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  height: 140%;
-  width: 100%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+	position: absolute;
+	left: 0;
+	top: 30%;
+	height: 140%;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
-
 .thumbnail-big img.portrait {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
-
 .page-one {
-  height: auto;
+	height: auto;
 }
-
 .box-page-one {
-  margin: 50px;
+	margin: 50px;
 }
-
-.box-page-one h1{
-  font-size: 400%;
+.box-page-one h1 {
+	font-size: 400%;
+  font-family: 'NunitoSans-Bold';
 }
-
 .page-two {
-  margin-top: 100px;
+	margin-top: 100px;
 }
-
 .bg-image-circle {
-  width: 300px;
-  height: 500px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: -177px;
-  background-position-y: 45px;
+	width: 300px;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -177px;
+	background-position-y: 45px;
 }
-
 .bg-image-circle-2 {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-
 .bg-image-circle-3 {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  float: right;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: right;
 }
-
 .bg-image-circle-4 {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 9;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/circle.png') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 9;
 }
-
 .bg-image-page-five {
-  width: 355px;
-  height: 160px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/ram.gif') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: -32px;
+	width: 355px;
+	height: 160px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/ram.gif') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: -32px;
 }
-
 .bg-image-page-five-rotate {
-  width: 300px;
-  height: 150px;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/ram.gif') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: rotate(540deg);
+	width: 300px;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/ram.gif') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: rotate(540deg);
 }
-
 .bg-our-mission {
-  width: 100%;
-  height: 80%;
-  overflow: hidden;
-  position: absolute;
-  background: url('http://hadimuda.abc:8000/assets/frontend/img/about/our-mission.png') no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: -32px;
-  z-index: -9999;
+	width: 100%;
+	height: 80%;
+	overflow: hidden;
+	position: absolute;
+	background: url('http://hadimuda.abc:8000/assets/frontend/img/about/our-mission.png') no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: -32px;
+	z-index: -9999;
 }
-
 .page-three {
-  margin-top: 200px;
+	margin-top: 200px;
 }
-
 .img-center-page-three {
-  width: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  margin-bottom: 30px;
-  margin-top: 30px;
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
-
 .br-company {
-  margin-top: 50px;
+	margin-top: 50px;
 }
-
 .page-four {
-  margin-top: 200px;
+	margin-top: 200px;
 }
-
 .box-blog {
-  background: #FFF;
-  box-shadow: 0px 2px 7px -3px #555;
-  width: 100%;
-  border-radius: 10px;
-  height: 100%;
-  margin-top: 50px;
+	background: #FFF;
+	box-shadow: 0px 2px 7px -3px #555;
+	width: 100%;
+	border-radius: 10px;
+	height: 100%;
+	margin-top: 50px;
 }
-
 .box-blog-big {
-  background: #FFF;
-  box-shadow: 0px 2px 7px -3px #555;
-  width: 100%;
-  border-radius: 10px;
-  height: 96%;
-  margin-top: 50px;
+	background: #FFF;
+	box-shadow: 0px 2px 7px -3px #555;
+	width: 100%;
+	border-radius: 10px;
+	height: 96%;
+	margin-top: 50px;
 }
-
 .title-blog {
-  width: 100%;
-  padding: 10px;
+	width: 100%;
+	padding: 10px;
 }
-
 .title-blog-big {
-  margin-left: 370px;
-  width: 100%;
-  padding: 10px;
+	margin-left: 370px;
+	width: 100%;
+	padding: 10px;
 }
-
 .desc-blog {
-  width: 100%;
-  padding: 10px;
+	width: 100%;
+	padding: 10px;
 }
-
 .desc-blog-big {
-    width: 50%;
-    padding: 10px;
-    margin-left: 370px;
+	width: 50%;
+	padding: 10px;
+	margin-left: 370px;
 }
-
-.box-blog a{
-  padding: 10px;
+.box-blog a {
+	padding: 10px;
 }
-
 .page-five {
-  margin-top: 200px;
+	margin-top: 200px;
 }
-
 .col-md-3-margin-bottom-blog {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
-
 .circle-page-five {
-  text-align: right;
+	text-align: right;
 }
-
-.circle-page-five img{
-  width: 300px;
-  margin-top: -195px;
+.circle-page-five img {
+	width: 300px;
+	margin-top: -195px;
 }
-
 .page-footer {
-  margin-top: 100px;
-  height: auto;
+	margin-top: 100px;
+	height: auto;
 }
-
 .box-footer {
-  margin-top: 50px;
+	margin-top: 50px;
 }
-
 .socmed {
-  padding: 20px;
-  padding-bottom: 0px;
+	padding: 20px;
+	padding-bottom: 0px;
 }
-
 .img-footer-1 img {
-  width: 350px;
-  margin-top: -120px;
-  margin-left: -148px;
+	width: 350px;
+	margin-top: -120px;
+	margin-left: -148px;
 }
-
-.img-footer-2 img{
-  width: 300px;
+.img-footer-2 img {
+	width: 300px;
 }
-
 .about-page {
-  height: auto;
+	height: auto;
 }
-
 .about-title {
-  margin-top: 100px;
+	margin-top: 100px;
 }
-
 .ourvision-page {
-  margin-top: 600px;
+	margin-top: 600px;
 }
-
 .img-our-vision {
-  width: 300px;
-  margin-top: 100px;
+	width: 300px;
+	margin-top: 100px;
 }
-
 .box-our-vision {
-  margin-top: 100px;
+	margin-top: 100px;
 }
-
 .ourmission-page {
-  margin-top: 200px;
+	margin-top: 200px;
 }
-
 .box-mission {
-  width: 500px;
-  height: 200px;
-  padding: 40px;
-  background: #fafafa;
-  margin-top: 55px;
+	width: 500px;
+	height: 200px;
+	padding: 40px;
+	background: #fafafa;
+	margin-top: 55px;
 }
-
 .carousel-content {
-    color:black;
-    display:flex;
-    align-items:center;
+	color: black;
+	display: flex;
+	align-items: center;
 }
-
 #text-carousel {
-  width: 100%;
-  height: auto;
-  padding: 50px;
+	width: 100%;
+	height: auto;
+	padding: 50px;
 }
-
 .carousel-indicators li {
-  background-color: #6FF6F5 !important;
+	background-color: #6FF6F5 !important;
 }
-
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
-  background: #FFF !important;
+	background: #FFF !important;
 }
-
 .s1 {
-  background: linear-gradient(45deg, rgba(44,172,203,1) 0%, rgba(14,137,122,1) 90%);
+	background: linear-gradient(45deg, rgba(44, 172, 203, 1) 0%, rgba(14, 137, 122, 1) 90%);
 }
-
 .s2 {
-  background: linear-gradient(45deg, rgba(64,204,209,1) 0%, rgba(14,137,118,1) 90%);
+	background: linear-gradient(45deg, rgba(64, 204, 209, 1) 0%, rgba(14, 137, 118, 1) 90%);
 }
-
 .s3 {
-  background: linear-gradient(45deg, rgba(64,170,209,1) 0%, rgba(14,137,118,1) 90%);
+	background: linear-gradient(45deg, rgba(64, 170, 209, 1) 0%, rgba(14, 137, 118, 1) 90%);
 }
-
 .s4 {
-  background: linear-gradient(45deg, rgba(64,209,159,1) 0%, rgba(14,137,118,1) 90%);
+	background: linear-gradient(45deg, rgba(64, 209, 159, 1) 0%, rgba(14, 137, 118, 1) 90%);
 }
-
 .margin-company-top {
-  margin-top: 50px;
+	margin-top: 50px;
 }
-
 .img-company {
-  margin-bottom: 30px;
-  width: 155px;
+	margin-bottom: 30px;
+	width: 155px;
 }
-
 .blog-header {
-  margin-top: 55px;
+	margin-top: 55px;
 }
-
-.col-blog{
-  width: 50%;
-  height: 50%;
+.col-blog {
+	width: 50%;
+	height: 50%;
 }
-
 .bg-gradient-blog {
-  width: 80px;
-  height: 20px;
-  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%);
-  border-radius: 10px;
-  margin-right: auto;
-  margin-left: auto;
-  top: -25px;
-  position: relative;
-  z-index: -9;
+	width: 80px;
+	height: 20px;
+	background: linear-gradient(45deg, rgba(145, 255, 242, 0.2940463362068966) 0%, rgba(166, 228, 253, 1) 90%);
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	top: -25px;
+	position: relative;
+	z-index: -9;
 }
-
 .bg-gradient-about {
-  width: 142px;
-  height: 20px;
-  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%);
-  border-radius: 10px;
-  margin-right: auto;
-  margin-left: auto;
-  top: -25px;
-  position: relative;
-  z-index: -9;
+	width: 142px;
+	height: 20px;
+	background: linear-gradient(45deg, rgba(145, 255, 242, 0.2940463362068966) 0%, rgba(166, 228, 253, 1) 90%);
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	top: -25px;
+	position: relative;
+	z-index: -9;
 }
-
 .box-blog-detail {
-  margin-top: 50px;
+	margin-top: 50px;
 }
-
 ol.breadcrumb {
-  background: linear-gradient(45deg, rgba(145,255,242,0.2940463362068966) 0%, rgba(166,228,253,1) 90%) !important;
+	background: linear-gradient(45deg, rgba(145, 255, 242, 0.2940463362068966) 0%, rgba(166, 228, 253, 1) 90%) !important;
 }
-
 .breadcrumb-item a {
-  color: #555 !important;
+	color: #555 !important;
+}
+.tags {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+.tags li {
+	float: left;
+}
+.tag {
+	background: #eee;
+	border-radius: 3px 0 0 3px;
+	color: #999;
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 20px 0 23px;
+	position: relative;
+	margin: 0 10px 10px 0;
+	text-decoration: none;
+	-webkit-transition: color 0.2s;
+}
+.tag::before {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+	content: '';
+	height: 6px;
+	left: 10px;
+	position: absolute;
+	width: 6px;
+	top: 10px;
+}
+.tag::after {
+	background: #fff;
+	border-bottom: 13px solid transparent;
+	border-left: 10px solid #eee;
+	border-top: 13px solid transparent;
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.tag:hover {
+	background-color: #a6e4fd;
+	color: #FFF;
+}
+.tag:hover::after {
+	border-left-color: #a6e4fd;
+}
+.recent-post h2 {
+	text-align: center;
+	margin-top: 50px;
+}
+.contact-header {
+	margin-top: 55px;
+}
+.bg-gradient-contact {
+	width: 120px;
+	height: 20px;
+	background: linear-gradient(45deg, rgba(145, 255, 242, 0.2940463362068966) 0%, rgba(166, 228, 253, 1) 90%);
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	top: -25px;
+	position: relative;
+	z-index: -9;
+}
+.box-address {
+	background: #fafafa;
+	padding: 25px;
+	border-right: 3px solid rgb(155, 220, 253);
+}
+.phone {
+	background: linear-gradient(85deg, rgba(145, 213, 254, 0.58) 0%, rgba(145, 255, 242, 0) 45%);
+	border-radius: 5px;
+	padding: 7px;
+	margin-bottom: 10px;
+}
+.email {
+	background: linear-gradient(85deg, rgba(145, 213, 254, 0.58) 0%, rgba(145, 255, 242, 0) 45%);
+	border-radius: 5px;
+	padding: 7px;
+}
+.box-maps {
+	background: #fafafa;
+	padding: 25px;
+	border-left: 3px solid rgb(155, 220, 253);
+}
+.box-form {
+	margin-top: 50px;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-line {
+  border: 0px;
+  border-bottom: 2px solid #91fff2;
+  border-radius: 0px;
+}
+.btn-width {
+  width: 100%;
+  background: linear-gradient(45deg, rgba(81,182,250,1) 0%, rgba(54,239,217,1) 90%) !important;
+  border: none !important;
+  font-family: 'NunitoSans-Bold';
 }

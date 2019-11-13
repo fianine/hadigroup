@@ -141,7 +141,7 @@
         <div class="col-md-12">
           <div class="mx-auto">
             <h5 style="text-align: center">Daily Quotes</h5>
-            <h2 style="text-align: center"> <strong>I Miss You My Self, I Love You My Self</strong> </h2>
+            <h2 style="text-align: center;font-family: 'NunitoSans-BoldItalic'"> <strong>I Miss You My Self, I Love You My Self</strong> </h2>
             <h6 style="text-align: center">Mawang - 2019</h6>
           </div>
         </div>

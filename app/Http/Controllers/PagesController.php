@@ -25,6 +25,9 @@ class PagesController extends Controller {
     return view('page/blogDetail');
   }
 
+  public function contact() {
+    return view('page/contact');
+  }
 }
 
 ?>
