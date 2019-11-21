@@ -165,6 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
+        jeremykenedy\LaravelRoles\RolesServiceProvider::class,
+        App\Repositories\Content\ContentRepoServiceProvider::class,
 
         /*
          * Application Service Providers...
