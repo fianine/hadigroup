@@ -20,7 +20,12 @@ class ContentController extends Controller
     // Header
     public function add_header(Request $request)
     {
-      $content = $this->contentRepository->findById(1);
-      return view('admin/content/header/add', compact('content'));
+      if(!$request->content){
+        $content = $this->contentRepository->findById(1);
+        return view('admin/content/header/add', compact('content'));
+      }else{
+        $header = $this->contentRepository->updateContent($request);
+        return redirect('admin/content/header');
+      }
     }
 }

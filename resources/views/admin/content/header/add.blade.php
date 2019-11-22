@@ -15,7 +15,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <form class="form" action="{{ url('admin/content/header') }}" method="post">
+        <form class="form" action="{{ url('admin/content/header') }}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="card">
             <div class="card-body">
@@ -26,9 +26,10 @@
               <div class="card-body">
                   <h4 class="card-title">Upload Image</h4>
                   <label for="input-file-now-custom-3">You can combine options</label>
-                  <input type="file" id="input-file-now-custom-3" class="dropify" data-default-file="{{ asset('/upload/content/'.$content->image) }}" data-height="500" name="userfile"/>
+                  <input type="file" id="input-file-now-custom-3" class="dropify" data-default-file="{{ asset('/upload/content/'.$content->image) }}" data-height="500" name="file"/>
               </div>
           </div>
+          <button type="submit" class="btn btn-primary">SAVE</button>
         </form>
       </div>
     </div>

@@ -13,7 +13,7 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
   Route::get('admin/dashboard', 'Admin\DashboardController@index');
 
   // Content
-  Route::get('admin/content/header', 'Admin\ContentController@add_header');
+  Route::match(['get','post'],'admin/content/header', 'Admin\ContentController@add_header');
 });
 
 // Pages
