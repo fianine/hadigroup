@@ -3,6 +3,11 @@
 namespace App\Repositories\Content;
 
 interface ContentInterface {
-    public function findById($id);
-    public function updateContent($request);
+    // Header
+    public function findHeaderById($id);
+    public function updateContentHeader($request);
+
+    // Social Media
+    public function findSocmedById($id);
+    public function updateContentSocmed($request);
 }

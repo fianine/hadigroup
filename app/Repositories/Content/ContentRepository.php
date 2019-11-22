@@ -4,24 +4,28 @@ namespace App\Repositories\Content;
 
 use App\Repositories\Content\ContentInterface as ContentInterface;
 use App\Header;
+use App\Socmed;
 use Validator;
 use File;
 
 class ContentRepository implements ContentInterface {
 
     protected $header;
+    protected $socmed;
 
-    public function __construct(Header $header)
+    public function __construct(Header $header, Socmed $socmed)
     {
         $this->header = $header;
+        $this->socmed = $socmed;
     }
 
-    public function findById($id)
+    // Header
+    public function findHeaderById($id)
     {
         return $this->header->find($id);
     }
 
-    public function updateContent($request)
+    public function updateContentHeader($request)
     {
       $validator = Validator::make($request->all(), [
        'file' => 'max:100000',
@@ -45,5 +49,22 @@ class ContentRepository implements ContentInterface {
       }
 
       $header->save();
+    }
+
+    // Social Media
+    public function findSocmedById($id)
+    {
+        return $this->socmed->find($id);
+    }
+
+    public function updateContentSocmed($request)
+    {
+        $socmed = Socmed::find(1);
+
+        $socmed->email = $request->email;
+        $socmed->instagram = $request->instagram;
+        $socmed->facebook = $request->facebook;
+
+        $socmed->save();
     }
 }

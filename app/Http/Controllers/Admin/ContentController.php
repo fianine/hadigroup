@@ -21,11 +21,22 @@ class ContentController extends Controller
     public function add_header(Request $request)
     {
       if(!$request->content){
-        $content = $this->contentRepository->findById(1);
+        $content = $this->contentRepository->findHeaderById(1);
         return view('admin/content/header/add', compact('content'));
       }else{
-        $header = $this->contentRepository->updateContent($request);
+        $header = $this->contentRepository->updateContentHeader($request);
         return redirect('admin/content/header');
+      }
+    }
+
+    public function add_socmed(Request $request)
+    {
+      if(!$request->email){
+        $content = $this->contentRepository->findSocmedById(1);
+        return view('admin/content/socmed/add', compact('content'));
+      }else{
+        $socmed = $this->contentRepository->updateContentSocmed($request);
+        return redirect('admin/content/social-media');
       }
     }
 }

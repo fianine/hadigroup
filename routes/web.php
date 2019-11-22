@@ -14,6 +14,7 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
 
   // Content
   Route::match(['get','post'],'admin/content/header', 'Admin\ContentController@add_header');
+  Route::match(['get','post'],'admin/content/social-media', 'Admin\ContentController@add_socmed');
 });
 
 // Pages
