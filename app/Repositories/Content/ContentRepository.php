@@ -19,46 +19,41 @@ class ContentRepository implements ContentInterface {
         $this->socmed = $socmed;
     }
 
-    // Header
-    public function findHeaderById($id)
+    public function findById($id,$type)
     {
+      if($type == 'header'){
         return $this->header->find($id);
-    }
-
-    public function updateContentHeader($request)
-    {
-      $validator = Validator::make($request->all(), [
-       'file' => 'max:100000',
-      ]);
-
-      if ($validator->fails()) {
-        return $validator->errors();
-      }
-
-      $header = Header::find(1);
-
-      if($request->hasFile('file')) {
-        $image = $request->file('file');
-        $filename = time().'.'.$image->guessExtension();
-        $path = $request->file('file')->move(base_path() . '/public/upload/content/', $filename);
-
-        $header->content = $request->content;
-        $header->image = $filename;
       }else{
-        $header->content = $request->content;
-      }
-
-      $header->save();
-    }
-
-    // Social Media
-    public function findSocmedById($id)
-    {
         return $this->socmed->find($id);
+      }
     }
 
-    public function updateContentSocmed($request)
+    public function updateContent($request,$type)
     {
+      if($type == 'header'){
+        $validator = Validator::make($request->all(), [
+         'file' => 'max:100000',
+        ]);
+
+        if ($validator->fails()) {
+          return $validator->errors();
+        }
+
+        $header = Header::find(1);
+
+        if($request->hasFile('file')) {
+          $image = $request->file('file');
+          $filename = time().'.'.$image->guessExtension();
+          $path = $request->file('file')->move(base_path() . '/public/upload/content/', $filename);
+
+          $header->content = $request->content;
+          $header->image = $filename;
+        }else{
+          $header->content = $request->content;
+        }
+
+        $header->save();
+      }else{
         $socmed = Socmed::find(1);
 
         $socmed->email = $request->email;
@@ -66,5 +61,6 @@ class ContentRepository implements ContentInterface {
         $socmed->facebook = $request->facebook;
 
         $socmed->save();
+      }
     }
 }

@@ -6,6 +6,7 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta content="" name="description">
 	<meta content="" name="author"><!-- Favicon icon -->
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="shortcut icon" href="{{ asset('/assets/frontend/img/logo-white.png') }}" type="image/png">
 	<title>Dashboard - PT. Hadi Muda Berkarya</title>
 	<link href="{{ asset('/assets/backend/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -13,6 +14,7 @@
 	<link href="{{ asset('/assets/backend/css/pages/responsive.dataTables.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/assets/backend/css/pages/summernote.css') }}" rel="stylesheet">
 	<link href="{{ asset('/assets/backend/css/pages/dropify.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('/assets/backend/css/pages/sweetalert.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/assets/backend/css/perfect-scrollbar.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/assets/backend/css/pages/morris.css') }}" rel="stylesheet">
 	<link href="{{ asset('/assets/backend/css/pages/c3.min.css') }}" rel="stylesheet">
@@ -57,62 +59,6 @@
 				<!-- ============================================================== -->
 				<div class="navbar-collapse">
 					<ul class="navbar-nav ml-auto">
-						<!-- ============================================================== -->
-						<!-- Messages -->
-						<!-- ============================================================== -->
-						<li class="nav-item dropdown">
-							<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle waves-effect waves-dark" data-toggle="dropdown" href="#" id="2"><i class="icon-Mail"></i>
-							<div class="notify">
-								<span class="heartbit"></span> <span class="point"></span>
-							</div></a>
-							<div aria-labelledby="2" class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown">
-								<ul>
-									<li>
-										<div class="drop-title">
-											You have 4 new messages
-										</div>
-									</li>
-									<li>
-										<div class="message-center">
-											<!-- Message -->
-											 <a href="#">
-											<div class="user-img">
-												<img alt="user" class="img-circle" src="https://wrappixel.com/demos/admin-templates/admin-wrap/assets/images/users/1.jpg"> <span class="profile-status online pull-right"></span>
-											</div>
-											<div class="mail-contnet">
-												<h5>Pavan kumar</h5><span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span>
-											</div></a> <!-- Message -->
-											 <a href="#">
-											<div class="user-img">
-												<img alt="user" class="img-circle" src="https://wrappixel.com/demos/admin-templates/admin-wrap/assets/images/users/2.jpg"> <span class="profile-status busy pull-right"></span>
-											</div>
-											<div class="mail-contnet">
-												<h5>Sonu Nigam</h5><span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span>
-											</div></a> <!-- Message -->
-											 <a href="#">
-											<div class="user-img">
-												<img alt="user" class="img-circle" src="https://wrappixel.com/demos/admin-templates/admin-wrap/assets/images/users/3.jpg"> <span class="profile-status away pull-right"></span>
-											</div>
-											<div class="mail-contnet">
-												<h5>Arijit Sinh</h5><span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span>
-											</div></a> <!-- Message -->
-											 <a href="#">
-											<div class="user-img">
-												<img alt="user" class="img-circle" src="https://wrappixel.com/demos/admin-templates/admin-wrap/assets/images/users/4.jpg"> <span class="profile-status offline pull-right"></span>
-											</div>
-											<div class="mail-contnet">
-												<h5>Pavan kumar</h5><span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
-											</div></a>
-										</div>
-									</li>
-									<li>
-										<a class="nav-link text-center" href="javascript:void(0);"><strong>See all e-Mails</strong> <i class="fa fa-angle-right"></i></a>
-									</li>
-								</ul>
-							</div>
-						</li><!-- ============================================================== -->
-						<!-- End Messages -->
-						<!-- ============================================================== --><!-- ============================================================== -->
 						<!-- Profile -->
 						<!-- ============================================================== -->
 						<li class="nav-item dropdown u-pro">
@@ -166,9 +112,6 @@
 									<a href="{{ url('admin/about') }}">About</a>
 								</li>
 								<li>
-									<a href="{{ url('admin/about/vision') }}">Vision</a>
-								</li>
-								<li>
 									<a href="{{ url('admin/about/mission') }}">Mision</a>
 								</li>
 							</ul>
@@ -180,12 +123,7 @@
 							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Blog</span></a>
 						</li>
 						<li>
-							<a aria-expanded="false" class="has-arrow waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Mailbox <span class="label label-rounded label-success">25</span></span></a>
-							<ul aria-expanded="false" class="collapse">
-								<li>
-									<a href="ui-cards.html">Inbox</a>
-								</li>
-							</ul>
+							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Mailbox <span class="label label-rounded label-success">25</span></span></a>
 						</li>
 					</ul>
 				</nav><!-- End Sidebar navigation -->
@@ -206,6 +144,7 @@
 	<script src="{{ asset('/assets/backend/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('/assets/backend/js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ asset('/assets/backend/js/dataTables.responsive.min.js') }}"></script>
+	@yield('script')
 	<script src="{{ asset('/assets/backend/js/summernote.min.js') }}"></script>
 	<script src="{{ asset('/assets/backend/js/dropify.min.js') }}"></script>
 	<script src="{{ asset('/assets/backend/js/perfect-scrollbar.js') }}"></script>
@@ -263,6 +202,16 @@
 					drDestroy.init();
 				}
 			})
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.multi-field-wrapper').each(function() {
+			var $wrapper = $('.multi-fields', this);
+			$("#tambahbaris", $(this)).click(function(e) {
+				$('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('');
+				<!-- $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val(''); -->
+			});
 		});
 	</script>
 </body>

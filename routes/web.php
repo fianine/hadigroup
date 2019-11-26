@@ -15,6 +15,14 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
   // Content
   Route::match(['get','post'],'admin/content/header', 'Admin\ContentController@add_header');
   Route::match(['get','post'],'admin/content/social-media', 'Admin\ContentController@add_socmed');
+
+  // About
+  Route::match(['get','post'],'admin/about', 'Admin\AboutController@index_about');
+
+  Route::get('admin/about/mission', 'Admin\AboutController@index_mission');
+  Route::match(['get','post'], 'admin/about/mission/add', 'Admin\AboutController@add_mission');
+  Route::match(['get','post'], 'admin/about/mission/edit/{id}', 'Admin\AboutController@edit_mission');
+  Route::delete('admin/about/mission/delete/{id}', 'Admin\AboutController@delete_mission');
 });
 
 // Pages
