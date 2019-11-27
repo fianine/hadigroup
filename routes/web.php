@@ -23,6 +23,12 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
   Route::match(['get','post'], 'admin/about/mission/add', 'Admin\AboutController@add_mission');
   Route::match(['get','post'], 'admin/about/mission/edit/{id}', 'Admin\AboutController@edit_mission');
   Route::delete('admin/about/mission/delete/{id}', 'Admin\AboutController@delete_mission');
+
+  // Company
+  Route::get('admin/company', 'Admin\CompanyController@index');
+  Route::match(['get','post'], 'admin/company/add', 'Admin\CompanyController@add');
+  Route::match(['get','post'], 'admin/company/edit/{id}', 'Admin\CompanyController@edit');
+  Route::delete('admin/company/delete/{id}', 'Admin\CompanyController@delete');
 });
 
 // Pages

@@ -35,7 +35,7 @@
 	<div class="preloader">
 		<div class="loader">
 			<div class="loader__figure"></div>
-			<p class="loader__label">Admin PT. Hadi Muda Berkarya</p>
+			<p class="loader__label">PT. Hadi Muda Berkarya</p>
 		</div>
 	</div><!-- ============================================================== -->
 	<!-- Main wrapper - style you can find in pages.scss -->
@@ -117,7 +117,7 @@
 							</ul>
 						</li>
 						<li>
-							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Company</span></a>
+							<a aria-expanded="false" class="waves-effect waves-dark" href="{{ url('admin/company') }}"><i class="icon-Record"></i><span class="hide-menu">Company</span></a>
 						</li>
             <li>
 							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Blog</span></a>

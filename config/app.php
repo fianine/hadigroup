@@ -172,6 +172,7 @@ return [
          */
          App\Repositories\Content\ContentRepoServiceProvider::class,
          App\Repositories\About\AboutRepoServiceProvider::class,
+         App\Repositories\Company\CompanyRepoServiceProvider::class,
 
         /*
          * Application Service Providers...
