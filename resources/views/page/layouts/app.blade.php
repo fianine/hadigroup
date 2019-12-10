@@ -55,15 +55,18 @@
               <br>
               <div class="socmed">
                 <div class="container">
+                  <?php
+                    $social = App\Sosmed::find(1);
+                  ?>
                   <div class="row">
                     <div class="col-sm-4">
-                      <a href="#"><i class="fa fa-facebook" style="color: #FFF;font-size: 50px"></i></a>
+                      <a href="{{ $social->facebook }}"><i class="fa fa-facebook" style="color: #FFF;font-size: 50px"></i></a>
                     </div>
                     <div class="col-sm-4">
-                      <a href="#"><i class="fa fa-envelope" style="color: #FFF;font-size: 50px"></i></a>
+                      <a href="{{ $social->email }}"><i class="fa fa-envelope" style="color: #FFF;font-size: 50px"></i></a>
                     </div>
                     <div class="col-sm-4">
-                      <a href="#"><i class="fa fa-instagram" style="color: #FFF;font-size: 50px"></i></a>
+                      <a href="{{ $social->instagram }}"><i class="fa fa-instagram" style="color: #FFF;font-size: 50px"></i></a>
                     </div>
                   </div>
                 </div>

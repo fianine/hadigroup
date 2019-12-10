@@ -57,7 +57,7 @@ class AboutController extends Controller
         $mission = $this->aboutRepository->findById($id,$type);
         return view('admin/about/mission/edit', compact('mission'));
       }else{
-        $mission = $this->aboutRepository->update($request,$id);
+        $mission = $this->aboutRepository->update($request,$id,$type);
         return redirect('admin/about/mission');
       }
     }

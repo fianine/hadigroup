@@ -13,8 +13,12 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
   Route::get('admin/dashboard', 'Admin\DashboardController@index');
 
   // Content
-  Route::match(['get','post'],'admin/content/header', 'Admin\ContentController@add_header');
-  Route::match(['get','post'],'admin/content/social-media', 'Admin\ContentController@add_socmed');
+  Route::match(['get','post'],'admin/content/header/{id}', 'Admin\ContentController@index');
+  Route::match(['get','post'], 'admin/content/update/{id}', 'Admin\ContentController@update');
+
+  // Social-media
+  Route::match(['get','post'],'admin/content/sosmed/{id}', 'Admin\SosmedController@index');
+  Route::match(['get','post'], 'admin/content/updatesosmed/{id}', 'Admin\SosmedController@update');
 
   // About
   Route::match(['get','post'],'admin/about', 'Admin\AboutController@index_about');
@@ -29,6 +33,19 @@ Route::group(['middleware' => ['auth', 'role:admin']], function(){
   Route::match(['get','post'], 'admin/company/add', 'Admin\CompanyController@add');
   Route::match(['get','post'], 'admin/company/edit/{id}', 'Admin\CompanyController@edit');
   Route::delete('admin/company/delete/{id}', 'Admin\CompanyController@delete');
+
+  //Blog
+  Route::get('admin/blog', 'Admin\BlogController@index');
+  Route::match(['get','post'], 'admin/blog/formadd', 'Admin\BlogController@formadd');
+  Route::match(['get','post'], 'admin/blog/add', 'Admin\BlogController@add');
+  Route::match(['get','post'], 'admin/blog/edit/{id}', 'Admin\BlogController@edit');
+  Route::match(['get','post'], 'admin/blog/update/{id}', 'Admin\BlogController@update');
+  Route::delete('admin/blog/delete/{id}', 'Admin\BlogController@delete');
+
+  //Mailbox
+  Route::get('admin/mail', 'Admin\MailController@index');
+  Route::match(['get','post'], 'admin/mail/see/{id}', 'Admin\MailController@see');
+  Route::delete('admin/mail/delete/{id}', 'Admin\MailController@delete');
 });
 
 // Pages
@@ -36,5 +53,10 @@ Route::get('/', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('company', 'PagesController@company');
 Route::get('blog', 'PagesController@blog');
-Route::get('detail', 'PagesController@blog_detail');
+Route::get('detail/{id}', 'PagesController@blog_detail');
 Route::get('contact', 'PagesController@contact');
+Route::match(['get','post'], 'contact_submit', 'PagesController@contact_submit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

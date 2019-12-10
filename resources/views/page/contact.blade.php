@@ -33,29 +33,30 @@
           <div class="box-form">
             <h4>Lets in touch</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <form class="form">
+            <form class="form" action="{{ url('contact_submit') }}" method="post">
+              @csrf
               <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-control form-line">
+                <input type="text" class="form-control form-line" name="name">
               </div>
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" class="form-control form-line">
+                <input type="text" class="form-control form-line" name="email">
               </div>
               <div class="form-group">
                 <label>Phone</label>
-                <input type="text" class="form-control form-line">
+                <input type="text" class="form-control form-line" name="phone">
               </div>
               <div class="form-group">
                 <label>Subject</label>
-                <input type="text" class="form-control form-line">
+                <input type="text" class="form-control form-line" name="subject">
               </div>
               <div class="form-group">
                 <label>Message</label>
-                <textarea name="name" class="form-control form-line"></textarea>
+                <textarea class="form-control form-line" name="message"></textarea>
               </div>
               <div class="form-group">
-                <button type="button" name="button" class="btn btn-primary btn-md btn-width">Submit</button>
+                <button type="submit" name="button" class="btn btn-primary btn-md btn-width">Submit</button>
               </div>
             </form>
           </div>

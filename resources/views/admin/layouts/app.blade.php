@@ -7,6 +7,7 @@
 	<meta content="" name="description">
 	<meta content="" name="author"><!-- Favicon icon -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<link rel="shortcut icon" href="{{ asset('/assets/frontend/img/logo-white.png') }}" type="image/png">
 	<title>Dashboard - PT. Hadi Muda Berkarya</title>
 	<link href="{{ asset('/assets/backend/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -98,10 +99,10 @@
 							<a aria-expanded="false" class="has-arrow waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Content</span></a>
 							<ul aria-expanded="false" class="collapse">
 								<li>
-									<a href="{{ url('admin/content/header') }}">Header</a>
+									<a href="{{ url('admin/content/header/1') }}">Header</a>
 								</li>
 								<li>
-									<a href="{{ url('admin/content/social-media') }}">Social Media</a>
+									<a href="{{ url('admin/content/sosmed/1') }}">Social Media</a>
 								</li>
 							</ul>
 						</li>
@@ -120,10 +121,10 @@
 							<a aria-expanded="false" class="waves-effect waves-dark" href="{{ url('admin/company') }}"><i class="icon-Record"></i><span class="hide-menu">Company</span></a>
 						</li>
             <li>
-							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Blog</span></a>
+							<a aria-expanded="false" class="waves-effect waves-dark" href="{{ url('admin/blog') }}"><i class="icon-Record"></i><span class="hide-menu">Blog</span></a>
 						</li>
 						<li>
-							<a aria-expanded="false" class="waves-effect waves-dark" href="#"><i class="icon-Record"></i><span class="hide-menu">Mailbox <span class="label label-rounded label-success">25</span></span></a>
+							<a aria-expanded="false" class="waves-effect waves-dark" href="{{ url('admin/mail') }}"><i class="icon-Record"></i><span class="hide-menu">Mailbox</span></a>
 						</li>
 					</ul>
 				</nav><!-- End Sidebar navigation -->
@@ -214,5 +215,6 @@
 			});
 		});
 	</script>
+	<script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" charset="utf-8"></script>
 </body>
 </html>

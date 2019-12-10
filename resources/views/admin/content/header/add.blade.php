@@ -15,7 +15,14 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <form class="form" action="{{ url('admin/content/header') }}" method="post" enctype="multipart/form-data">
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+          @foreach ($errors->all() as $error)
+          {{ $error }} <br/>
+          @endforeach
+        </div>
+        @endif
+        <form class="form" action="{{ url('admin/content/update/'.$content->id) }}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="card">
             <div class="card-body">

@@ -9,8 +9,7 @@
           <div class="about-title text-center">
             <h2> <strong>About Us</strong> </h2>
             <div class="bg-gradient-about"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>{{ $about->about }}</p>
           </div>
         </div>
         <div class="tsext-right">
@@ -29,8 +28,7 @@
         <div class="col-md-8">
           <div class="box-our-vision">
             <h2>Our Vision</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+            <p>{{ $about->about }}</p>
         </div>
       </div>
     </div>
@@ -44,20 +42,18 @@
           <div class="box-mission">
             <div id="demo" class="carousel slide" data-ride="carousel">
               <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
+                <?php $no=1; ?>
+                @foreach ($about_mission as $key => $data)
+                <?php $no++; ?>
+                <li data-target="#demo" data-slide-to="{{ $no }}" <?php if($no=1){echo "class='active'";} ?>></li>
+                @endforeach
               </ul>
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                @foreach ($about_mission as $key => $data)
+                <div class="carousel-item <?php if($data->about_id == 1){echo "active";}?>">
+                  <p>{{ $data->mission }}</p>
                 </div>
-                <div class="carousel-item">
-                  <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="carousel-item">
-                  <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
+                @endforeach
               </div>
               <a class="carousel-control-prev" href="#demo" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -79,18 +75,11 @@
             <h2 style="text-align: center">Our Companies</h2>
           </div>
         </div>
+        @foreach($company as $key=>$value)
         <div class="col-md-3">
-          <img src="{{ asset('/assets/frontend/img/about/hamuraPC.png') }}" class="img-fluid">
+          <img src="{{ asset('/upload/company/logo/'.$value->company_logo) }}" class="img-fluid">
         </div>
-        <div class="col-md-3">
-          <img src="{{ asset('/assets/frontend/img/about/GMTPC.png') }}" class="img-fluid">
-        </div>
-        <div class="col-md-3">
-          <img src="{{ asset('/assets/frontend/img/about/DidayaPC.png') }}" class="img-fluid">
-        </div>
-        <div class="col-md-3">
-          <img src="{{ asset('/assets/frontend/img/about/BengkelHostPC.png') }}" class="img-fluid">
-        </div>
+        @endforeach
       </div>
     </div>
   </div>
