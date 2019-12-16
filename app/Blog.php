@@ -10,6 +10,7 @@ class Blog extends Model
   protected $fillable = [
     'title',
     'content',
+    'judulslug',
     'created_at',
     'updated_at'
   ];

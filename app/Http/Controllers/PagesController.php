@@ -52,8 +52,7 @@ class PagesController extends Controller {
   }
 
   public function blog_detail(Request $request, $id) {
-    $id_data = Crypt::decryptString($id);
-    $blog = Blog::find($id_data);
+    $blog = Blog::where('judulslug', $id)->first();
     $blogdata = Blog::paginate(4);
     return view('page/blogDetail', compact('blog','blogdata'));
   }

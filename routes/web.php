@@ -4,7 +4,7 @@
 Route::group(['before' =>  'auth'], function(){
   Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login');
   Route::match(['get', 'post'], 'login', 'Auth\LoginController@login');
-  Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+  Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 });
 
 // Admin

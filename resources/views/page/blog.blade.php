@@ -35,7 +35,7 @@
               ?>
               <p>{{ substr($text, 0, $num_char) . '...' }}</p>
             </div>
-            <a href="{{ url('detail/'.Crypt::encryptString($data->id)) }}" class="co-3"> <strong>Read More</strong> <i class="fa fa-long-arrow-right"></i> </a>
+            <a href="{{ url('detail/'.$data->judulslug) }}" class="co-3"> <strong>Read More</strong> <i class="fa fa-long-arrow-right"></i> </a>
           </div>
         </div>
         @endforeach

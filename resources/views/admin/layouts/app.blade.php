@@ -66,12 +66,9 @@
 							<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" data-toggle="dropdown" href="#"><img alt="user" class="" src="https://wrappixel.com/demos/admin-templates/admin-wrap/assets/images/users/1.jpg"> <span class="hidden-md-down">{{ Auth::user()->name }} &nbsp;<i class="fa fa-angle-down"></i></span></a>
 							<div class="dropdown-menu dropdown-menu-right animated flipInY">
 								<ul class="dropdown-user">
-									<li>
-										<a href="#"><i class="ti-settings"></i> Account Setting</a>
-									</li>
 									<li class="divider" role="separator"></li>
 									<li>
-										<a href="#"><i class="fa fa-power-off"></i> Logout</a>
+										<a href="{{ url('/logout') }}"><i class="fa fa-power-off"></i> Logout</a>
 									</li>
 								</ul>
 							</div>

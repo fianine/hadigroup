@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Blog;
+use Illuminate\Support\Str;
 use Auth;
 
 class BlogController extends Controller
@@ -44,6 +45,7 @@ class BlogController extends Controller
     $blog->user_id=Auth::user()->id;
     $blog->image=$name_file;
     $blog->tags=$request->tags;
+    $blog->judulslug = Str::slug($request->title);
     $blog->save();
       return redirect('admin/blog');
   }
@@ -95,6 +97,7 @@ class BlogController extends Controller
     $blog->user_id=Auth::user()->id;
     $blog->image=$file_name_logo_blog;
     $blog->tags=$request->tags;
+    $blog->judulslug = Str::slug($request->title);
     $blog->save();
     return redirect('admin/blog');
   }
